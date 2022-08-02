@@ -18,3 +18,4 @@ ingredients.forEach(ingredient => {
 })
 
 list.append(...liArray)
+
