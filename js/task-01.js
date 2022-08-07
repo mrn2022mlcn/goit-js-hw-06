@@ -1,14 +1,7 @@
-"use strict";
-
-const totalCategories = document.querySelectorAll(".item");
-console.log(`Number of categorie ${totalCategories.length}`);
-
-const categoriesArray = [...totalCategories]
-  .map(
-    categories => 
-    `Category: ${categories.children[0].textContent}
-     Elements: ${categories.children[1].children.length}`
-  )
-  .join("\n");
-console.log(categoriesArray);
-
+const list = document.querySelectorAll('li.item');
+console.log(`Number of categories:${list.length}`);
+const ul = document.querySelectorAll('#categories>li');
+ul.forEach(el => {
+  const category = `Category: ${el.firstElementChild.textContent}`; 
+  const elements= `Elements: ${el.lastElementChild.children.length}`;
+  console.log(category);  console.log(elements);});
